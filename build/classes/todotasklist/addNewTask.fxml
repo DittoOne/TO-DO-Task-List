@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todotasklist.AddNewTaskController">
+   <children>
+      <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #8d7bac;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="backIcon" fitHeight="31.0" fitWidth="35.0" layoutX="8.0" layoutY="8.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/back.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="back" layoutX="8.0" layoutY="3.0" opacity="0.76" prefHeight="40.0" prefWidth="108.0" text="Back">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Label>
+            <Label layoutX="253.0" layoutY="2.0" prefHeight="40.0" prefWidth="206.0" text="Add New Task">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="163.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+         <children>
+            <TextField fx:id="newTask" layoutX="203.0" layoutY="68.0" prefHeight="25.0" prefWidth="413.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="94.0" layoutY="67.0" prefHeight="25.0" prefWidth="55.0" text="Task:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="taskDetails" layoutX="203.0" layoutY="116.0" prefHeight="200.0" prefWidth="413.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="103.0" layoutY="116.0" prefHeight="27.0" prefWidth="91.0" text="Discription:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="deadlineDate" layoutX="203.0" layoutY="350.0" onAction="#deadlineDateSet" prefHeight="25.0" prefWidth="413.0" />
+            <Label layoutX="103.0" layoutY="349.0" prefHeight="17.0" prefWidth="91.0" text="DeadLine:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fromDate" layoutX="203.0" layoutY="33.0" onAction="#fromDateSet" prefHeight="25.0" prefWidth="413.0" />
+            <Label layoutX="103.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Start:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="saveIcon" fitHeight="46.0" fitWidth="55.0" layoutX="686.0" layoutY="384.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/save.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="save" layoutX="627.0" layoutY="381.0" opacity="0.78" prefHeight="52.0" prefWidth="114.0" text="Save">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todotasklist.ToDoListWindowController">
+   <children>
+      <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #8d7bac;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="menuIcon" fitHeight="43.0" fitWidth="40.0" layoutX="7.0" layoutY="4.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/menu-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exitIcon" fitHeight="46.0" fitWidth="40.0" layoutX="712.0" layoutY="4.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/exit%20(2).png" />
+               </image>
+            </ImageView>
+            <Label fx:id="menu" layoutX="7.0" layoutY="4.0" opacity="0.73" prefHeight="33.0" prefWidth="120.0" text="Menu" textAlignment="CENTER" AnchorPane.leftAnchor="7.0">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="exit" layoutX="672.0" layoutY="4.0" opacity="0.73" prefHeight="40.0" prefWidth="80.0" text="Exit" textAlignment="CENTER" AnchorPane.leftAnchor="672.0" AnchorPane.rightAnchor="18.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="46.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="46.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="TaskIcon" fitHeight="40.0" fitWidth="46.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/notebook.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="AddIcon" fitHeight="40.0" fitWidth="46.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/add.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="settingsIcon" fitHeight="40.0" fitWidth="46.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/process.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="infIcon" fitHeight="40.0" fitWidth="46.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/info.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" opacity="0.02" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0" />
+      <AnchorPane fx:id="AllTaskPane" layoutX="297.0" layoutY="99.0" prefHeight="355.0" prefWidth="463.0" style="-fx-background-color: #8d7bac;" AnchorPane.rightAnchor="20.0">
+         <children>
+            <ListView fx:id="obj" layoutX="18.0" layoutY="42.0" prefHeight="267.0" prefWidth="428.0" style="-fx-background-color: white;" />
+            <Label alignment="TOP_CENTER" layoutX="69.0" layoutY="7.0" prefHeight="33.0" prefWidth="288.0" text="All Tasks">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="todayTaskpane" prefHeight="355.0" prefWidth="463.0" style="-fx-background-color: #8d7bac;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <ListView fx:id="todayListview" layoutX="18.0" layoutY="42.0" prefHeight="267.0" prefWidth="428.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="10.0" />
+            <Label alignment="TOP_CENTER" layoutX="69.0" layoutY="7.0" prefHeight="33.0" prefWidth="288.0" text="TodayTasks">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="upTaskPane" prefHeight="355.0" prefWidth="463.0" style="-fx-background-color: #8d7bac;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <ListView fx:id="upComingListview" layoutX="18.0" layoutY="42.0" prefHeight="267.0" prefWidth="428.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="20.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ListView>
+            <Label alignment="TOP_CENTER" layoutX="69.0" layoutY="7.0" prefHeight="33.0" prefWidth="288.0" text="UpComingTasks">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RadioTaskpane" layoutX="247.0" layoutY="46.0" prefHeight="103.0" prefWidth="209.0" style="-fx-background-color: white;" AnchorPane.topAnchor="46.0">
+         <children>
+            <RadioButton fx:id="upTask" layoutX="4.0" layoutY="-5.0" mnemonicParsing="false" onAction="#ShowTaskPane" prefHeight="38.0" prefWidth="203.0" text="Upcoming Task" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="allTask" layoutX="2.0" layoutY="28.0" mnemonicParsing="false" onAction="#ShowTaskPane" prefHeight="38.0" prefWidth="205.0" selected="true" text="All Task" toggleGroup="$task" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="todayTask" layoutX="3.0" layoutY="58.0" mnemonicParsing="false" onAction="#ShowTaskPane" prefHeight="38.0" prefWidth="205.0" text="today's Task" toggleGroup="$task" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="58.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" prefHeight="454.0" prefWidth="97.0" style="-fx-background-color: #e7dede;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <VBox prefHeight="454.0" prefWidth="203.0" spacing="5.0" style="-fx-background-color: #f3f6f4;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="tasks1" opacity="0.66" prefHeight="53.0" prefWidth="203.0" style="-fx-background-color: white;" text="Tasks">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="30.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="add1" opacity="0.66" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: white;" text="Add">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="30.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="settings1" opacity="0.66" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: white;" text="Settings">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="30.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="about1" opacity="0.66" prefHeight="53.0" prefWidth="205.0" style="-fx-background-color: white;" text="About">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="30.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="46.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="46.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="TaskIcon1" fitHeight="40.0" fitWidth="46.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/notebook.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="AddIcon1" fitHeight="40.0" fitWidth="46.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/add.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="settingsIcon1" fitHeight="40.0" fitWidth="46.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/process.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="infIcon1" fitHeight="40.0" fitWidth="46.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@my_icon/info.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

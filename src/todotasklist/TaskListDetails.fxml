@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todotasklist.TaskListDetailsController">
+   <children>
+      <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #8d7bac;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="backIcon" fitHeight="39.0" fitWidth="39.0" layoutX="7.0" layoutY="4.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/back.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="back" layoutX="8.0" layoutY="1.0" opacity="0.58" prefHeight="46.0" prefWidth="98.0" text="Back">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="37.0" layoutY="54.0" prefHeight="403.0" prefWidth="682.0" style="-fx-background-color: #eae6f2;" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="54.0">
+         <children>
+            <Label layoutX="52.0" layoutY="34.0" prefHeight="25.0" prefWidth="98.0" text="Starting Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sDateTextField" layoutX="169.0" layoutY="34.0" prefHeight="25.0" prefWidth="345.0" />
+            <TextField fx:id="dDateTextField" layoutX="169.0" layoutY="83.0" prefHeight="25.0" prefWidth="345.0" />
+            <Label layoutX="52.0" layoutY="83.0" prefHeight="25.0" prefWidth="104.0" text="DeadLine Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sTaskTextField" layoutX="169.0" layoutY="135.0" prefHeight="25.0" prefWidth="345.0" />
+            <Label layoutX="52.0" layoutY="135.0" prefHeight="25.0" prefWidth="113.0" text="Short Discription:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="taskDetailTextField" layoutX="169.0" layoutY="189.0" prefHeight="177.0" prefWidth="345.0" />
+            <Label layoutX="48.0" layoutY="189.0" prefHeight="25.0" prefWidth="113.0" text=" Task Detail:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="deleteIcon" fitHeight="39.0" fitWidth="84.0" layoutX="629.0" layoutY="347.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@my_icon/trashClosed.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="delete" layoutX="571.0" layoutY="345.0" opacity="0.66" prefHeight="46.0" prefWidth="98.0" text="Delete">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
